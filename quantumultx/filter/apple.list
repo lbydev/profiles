@@ -1,18 +1,17 @@
 # Apple
-HOST-SUFFIX,apps.apple.com,Proxy
-HOST-SUFFIX,music.apple.com,DIRECT,resolve-on-proxy
-USER-AGENT,com.apple.geod*,DIRECT
-USER-AGENT,com.apple.Maps,DIRECT
-HOST-SUFFIX,icloud.com,DIRECT
-HOST-SUFFIX,icloud-content.com,DIRECT
-HOST-SUFFIX,me.com,DIRECT
-HOST-SUFFIX,mzstatic.com,DIRECT
-HOST-SUFFIX,akadns.net,DIRECT
-HOST-SUFFIX,aaplimg.com,DIRECT
-HOST-SUFFIX,cdn-apple.com,DIRECT
-HOST-SUFFIX,apple.com,DIRECT
-HOST-SUFFIX,apple-cloudkit.com,DIRECT
-HOST,hls.itunes.apple.com,Proxy
-##注释此选项有助于大多数App开发者分析崩溃信息；如果您拒绝一切崩溃数据统计、搜集，请取消 # 注释。
+DOMAIN-SUFFIX,aaplimg.com,Apple
+DOMAIN-SUFFIX,apple.co,Apple
+DOMAIN-SUFFIX,apple.com,Apple
+DOMAIN-SUFFIX,apple.com.cn,Apple
+DOMAIN-SUFFIX,apple-cloudkit.com,Apple
+DOMAIN-SUFFIX,appstore.com,Apple
+DOMAIN-SUFFIX,cdn-apple.com,Apple
+DOMAIN-SUFFIX,crashlytics.com,Apple
+DOMAIN-SUFFIX,icloud.com,Apple
+DOMAIN-SUFFIX,icloud.com.cn,Apple
+DOMAIN-SUFFIX,icloud-content.com,Apple
+DOMAIN-SUFFIX,me.com,Apple
+DOMAIN-SUFFIX,mzstatic.com,Apple
+DOMAIN,www-cdn.icloud.com.akadns.net,Apple
 HOST,e.crashlytics.com,REJECT
 IP-CIDR,17.0.0.0/8,Apple
