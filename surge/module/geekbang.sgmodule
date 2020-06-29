@@ -6,4 +6,4 @@ hostname = %APPEND% time.geekbang.org
 
 [Script]
 
-geekbang intro = type=http-response,requires-body=1,max-size=0,pattern=https://time.geekbang.org/serv/v1/column/intro,script-path=https://raw.githubusercontent.com/lbydev/profiles/master/surge/script/intro.js
+geekbang intro = type=http-response,requires-body=1,max-size=0,pattern=https://time.geekbang.org/serv/v1/column/intro,script-path=https://raw.githubusercontent.com/lbydev/profiles/master/surge/script/time_intro.js
