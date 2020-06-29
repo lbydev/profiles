@@ -1,9 +1,0 @@
-#!name= geekbang
-#!desc= Remove Geekbang Ads (Geekbang Version:1.0.0)
-
-[MITM]
-hostname = %APPEND% time.geekbang.org
-
-[Script]
-
-geekbang intro = type=http-response,requires-body=1,pattern=https://time.geekbang.org/serv/v1/column/intro,script-path=https://raw.githubusercontent.com/lbydev/profiles/master/surge/script/time_intro.js
