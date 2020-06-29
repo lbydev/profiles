@@ -1,5 +1,5 @@
 let body = $response.body
 body = JSON.parse(body)
-delete body['data']['footer_cover_data']
+body['data']['footer_cover_data'] = null
 body = JSON.stringify(body)
 $done({body})
