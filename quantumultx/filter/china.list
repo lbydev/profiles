@@ -165,3 +165,6 @@ DOMAIN-SUFFIX,tencent.com,DIRECT
 DOMAIN-SUFFIX,tencent-cloud.net,DIRECT
 DOMAIN-SUFFIX,tenpay.com,DIRECT
 DOMAIN,file-igamecj.akamaized.net,DIRECT
+
+# > v2ex
+DOMAIN-SUFFIX,v2ex.com,DIRECT
