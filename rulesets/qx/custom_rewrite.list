@@ -1,0 +1,34 @@
+hostname = mp.weixin.qq.com,www.zhihu.com,api.zhihu.com,appcloud2.zhihu.com,zhuanlan.zhihu.com,time.geekbang.org
+
+; 去除微信公众号文章内广告和三连
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url script-response-body https://raw.githubusercontent.com/lbydev/profiles/master/rulesets/qx/scripts/wechat.js
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgext url script-response-body https://raw.githubusercontent.com/lbydev/profiles/master/rulesets/qx/scripts/wechat_ext.js
+
+# 知乎去广告
+^https://api.zhihu.com/topstory/follow url script-response-body https://raw.githubusercontent.com/lbydev/profiles/master/rulesets/qx/scripts/zhihu_recommend.js
+
+
+# 极客时间
+^https:\/\/time\.geekbang\.org\/serv\/v1\/(column\/intro|article) url script-response-body https://raw.githubusercontent.com/lbydev/profiles/master/rulesets/qx/scripts/time_intro.js
+
+#联通营业厅 去轮播广告 (By Wangsc1)
+^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/getHomePageAd url script-response-body https://raw.githubusercontent.com/lbydev/profiles/master/rulesets/qx/scripts/china_unicom.js
+
+# yyzs,keep
+^https?:\/\/(i|newdrugs)\.dxy\.cn\/(snsapi\/username\/|app\/user\/(pro\/stat\?|init\?timestamp=)) url script-response-body https://raw.githubusercontent.com/lbydev/profiles/master/rulesets/qx/scripts/yyzs.js
+#^https:\/\/api\.gotokeep\.com\/(.+\/subject|.+\/dynamic) url script-response-body https://raw.githubusercontent.com/lbydev/profiles/master/rulesets/qx/scripts/keep.js
+
+# 什么值得买
+^https?:\/\/(s|h(aojia|omepage)|(articl|baik)e)-api\.smzdm\.com\/(home|sou) url script-response-body https://raw.githubusercontent.com/lbydev/profiles/master/rulesets/qx/scripts/smzdm.js
+
+# 抖音
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/feed\/ url script-response-body https://raw.githubusercontent.com/lbydev/profiles/master/rulesets/qx/scripts/douyin_feed.js
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/aweme\/post\/ url script-response-body https://raw.githubusercontent.com/lbydev/profiles/master/rulesets/qx/scripts/douyin_post.js
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/follow\/feed\/ url script-response-body https://raw.githubusercontent.com/lbydev/profiles/master/rulesets/qx/scripts/douyin_follow.js
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/nearby\/feed\/ url script-response-body https://raw.githubusercontent.com/lbydev/profiles/master/rulesets/qx/scripts/douyin_nearby.js
+
+# 百度（全站替换为手机百度 Quark 的 User-Agent）
+^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com url request-header (\r\n)User-Agent:.+iPhone.+(\r\n) request-header $1User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)$2
+
+# 知乎（部分替换为手机百度 Quark 的 User-Agent）
+^https?:\/\/www\.zhihu\.com url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)$2
