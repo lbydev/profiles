@@ -1,0 +1,8 @@
+hostname = *.chelaile.net.cn, pic*.chelaile.net
+
+# 车来了简化
+^https?:\/\/api\.chelaile\.net\.cn\/content\/agg\/info url script-response-body https://raw.githubusercontent.com/lbydev/profiles/master/rulesets/qx/scripts/chelaile_ad.js
+^https?:\/\/api\.chelaile\.net\.cn\/infoflow\/api\/v1\/info\/list url script-response-body https://raw.githubusercontent.com/lbydev/profiles/master/rulesets/qx/scripts/chelaile_ad.js
+^https?:\/\/api\.chelaile\.net\.cn\/goocity\/city\!localCity\.action url script-response-body https://raw.githubusercontent.com/lbydev/profiles/master/rulesets/qx/scripts/chelaile_localcity.js
+^https?:\/\/(cdn\.api\.|api\.|)chelaile\.net\.cn\/goocity\/city\!cityInfo\.action url script-response-body https://raw.githubusercontent.com/lbydev/profiles/master/rulesets/qx/scripts/chelaile_city.js
+^https?:\/\/web\.chelaile\.net\.cn\/api\/welfare-agency\/fresh url script-response-body https://raw.githubusercontent.com/lbydev/profiles/master/rulesets/qx/scripts/chelaile_welfare.js
