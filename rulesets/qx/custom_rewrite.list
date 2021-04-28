@@ -1,6 +1,6 @@
 hostname = mp.weixin.qq.com,www.zhihu.com,api.zhihu.com,appcloud2.zhihu.com,zhuanlan.zhihu.com,time.geekbang.org
 
-; 去除微信公众号文章内广告和三连
+;去除微信公众号文章内广告和三连
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url script-response-body https://raw.githubusercontent.com/lbydev/profiles/master/rulesets/qx/scripts/wechat.js
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgext url script-response-body https://raw.githubusercontent.com/lbydev/profiles/master/rulesets/qx/scripts/wechat_ext.js
 
@@ -26,7 +26,7 @@ hostname = mp.weixin.qq.com,www.zhihu.com,api.zhihu.com,appcloud2.zhihu.com,zhua
 # 什么值得买
 ^https?:\/\/(s|h(aojia|omepage)|(articl|baik)e)-api\.smzdm\.com\/(home|sou) url script-response-body https://raw.githubusercontent.com/lbydev/profiles/master/rulesets/qx/scripts/smzdm.js
 
-# 抖音
+# 抖音,拦截推荐播放
 ^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/feed\/ url script-response-body https://raw.githubusercontent.com/lbydev/profiles/master/rulesets/qx/scripts/douyin_feed.js
 ^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/aweme\/post\/ url script-response-body https://raw.githubusercontent.com/lbydev/profiles/master/rulesets/qx/scripts/douyin_post.js
 ^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/follow\/feed\/ url script-response-body https://raw.githubusercontent.com/lbydev/profiles/master/rulesets/qx/scripts/douyin_follow.js
